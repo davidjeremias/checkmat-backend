@@ -4,54 +4,38 @@ server:
     context-path: /checkmat-backend
   port: 9080
 
-# H2
-#spring.h2.console.enabled=true
-#spring.h2.console.path=/h2
-
-# DATASOURCE
-#spring.datasource.url=jdbc:h2:mem:testdb
-#spring.datasource.username=sa
-#spring.datasource.password=
-#spring.datasource.driver-class-name=org.h2.Driver
-#spring.jpa.hibernate.ddl-auto=update
-#spring.jpa.show-sql=true
-
-#CONFIGURAÇÃO DO BANCO POSTGRES
-#spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
-#spring.datasource.url=jdbc:postgresql://localhost:5432/checkmat?createDatabaseIfNotExiste=true
-#spring.datasource.password=postgres
-#spring.datasource.username=postgres
-#spring.jpa.show-sql=true
-
-#CONFIGURAÇÃO DO BANCO MYSQL
 spring:
   application:
     name: checkmate
+  jmx:
+    enabled: false
+
+#CONFIGURACAO DO BANCO POSTGRES
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-  jmx:
-    enabled: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
   datasorce:
-    url: jdbc:mysql://localhost:3306/checkmate?allowPublicKeyRetrieval=true&sslMode=DISABLED
-    username: root
+    url: jdbc:postgresql://localhost:5432/checkmat?createDatabaseIfNotExiste=true
+    username: postgres
     password: 415782
 
-#ATIVANDO MIGRAÇÃO DO FLYWAY
+#ATIVANDO MIGRACAO DO FLYWAY
   flyway: baseline-on-migrate=true
 
-#NÃO ACEITAR ATRIBUTOS DESCONHECIDOS PELA API
+#NAO ACEITAR ATRIBUTOS DESCONHECIDOS PELA API
   jackson:
     deserialization:
       fail-on-unknown-properties: false
     serialization:
       fail-on-empty-beans: false
 
-#CONFIGURAÇÕES DE SERVIDOR DE EMAIL
+#CONFIGURAï¿½ï¿½ES DE SERVIDOR DE EMAIL
 #spring.mail.host=smtp.gmail.com
 #spring.mail.port=587
 #spring.mail.username=com1.com3@gmail.com

@@ -8,7 +8,7 @@ INSERT INTO public.tb002_contato(
 
 INSERT INTO public.tb004_empresa(
 	co_empresa, co_cnpj, no_razao_social, no_nome_fantasia, de_situacao, no_natureza_juridica, dt_abertura, no_tipo_empresa, de_porte, de_status, contato_co, endereco_co)
-	VALUES (1, '72031754000167', 'u2d tecnologia', 'dflex delivery', 'ATIVA', '230-5 - Empresa Individual de Responsabilidade Limitada (de Natureza Empresária)', '13/07/2018', 'MATRIZ', 'MICRO EMPRESA', 'OK', 1, 1);
+	VALUES (1, '72031754000167', 'u2d tecnologia', 'dflex delivery', 'ATIVA', '230-5 - Empresa Individual de Responsabilidade Limitada (de Natureza Empresï¿½ria)', '2018-07-13', 'MATRIZ', 'MICRO EMPRESA', 'OK', 1, 1);
 
 INSERT INTO public.tb005_usuario(
 	no_nome, nu_cpf, co_senha, de_email, empresa_co)
